@@ -1,1 +1,19 @@
-<p>character-card works!</p>
+<ng-container>
+    <a routerLink='/characters/1/detail' class="cardAnchor">
+    <div class="card-container">
+        <div class="card">
+            <img class="cardImg" [src]="character.cardImgPath" alt="Character"/>
+            <img src='/assets/images/user-circle-white-icon.svg' alt="Profile"/>
+            <span class="card-label mt-1">
+                Name
+            </span>
+            <h3 class="card-heading">
+                {{character.name}}
+            </h3>
+            <span class="select-btn">
+           Select <img class="d-inline-block" src='/assets/images/arrow-right-circle-icon.svg' alt="Arrow Right"/>
+        </span>
+        </div>
+    </div>
+</a>
+</ng-container>

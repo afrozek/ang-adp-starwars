@@ -23,26 +23,26 @@ export class CharactersHomeComponent implements OnInit {
         id: 1,
         name: "Luke Skywalker",
         url: "https://swapi.co/api/people/1/",
-        cardImgPath: "/images/luke-skywalker-card-render.svg"
+        cardImgPath: "/assets/images/luke-skywalker-card-render.svg"
       },
       {
         id: 4,
         name: "Darth Vader",
         url: "https://swapi.co/api/people/4/",
-        cardImgPath: "/images/darth-vader-card-render.svg",
+        cardImgPath: "/assets/images/darth-vader-card-render.svg",
         id: 4
       },
       {
         id: "unknown",
         name: "Obi-wan Kenobi",
         url: "https://swapi.co/api/people/unknown/",
-        cardImgPath: "/images/obi-wan-kenobi-card-render.svg"
+        cardImgPath: "/assets/images/obi-wan-kenobi-card-render.svg"
       },
       {
         id: 3,
         name: "R2-D2",
         url: "https://swapi.co/api/people/3/",
-        cardImgPath: "/images/r2-d2-card-render.svg"
+        cardImgPath: "/assets/images/r2-d2-card-render.svg"
       }
     ];
   }
