@@ -12,4 +12,8 @@ export class CharactersHomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  // private fetchCharacters() {
+  //   this.http.get('')
+  // }
+
 }
