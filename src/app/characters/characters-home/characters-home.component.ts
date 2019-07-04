@@ -6,14 +6,45 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./characters-home.component.scss']
 })
 export class CharactersHomeComponent implements OnInit {
+  
+  characters = []
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() { 
+    
   }
 
-  // private fetchCharacters() {
-  //   this.http.get('')
-  // }
+  ngOnInit() {
+    this.fetchCharacters();
+  }
+
+  private fetchCharacters() {
+     return this.characters = [
+      {
+        id: 1,
+        name: "Luke Skywalker",
+        url: "https://swapi.co/api/people/1/",
+        cardImgPath: "/images/luke-skywalker-card-render.svg"
+      },
+      {
+        id: 4,
+        name: "Darth Vader",
+        url: "https://swapi.co/api/people/4/",
+        cardImgPath: "/images/darth-vader-card-render.svg",
+        id: 4
+      },
+      {
+        id: "unknown",
+        name: "Obi-wan Kenobi",
+        url: "https://swapi.co/api/people/unknown/",
+        cardImgPath: "/images/obi-wan-kenobi-card-render.svg"
+      },
+      {
+        id: 3,
+        name: "R2-D2",
+        url: "https://swapi.co/api/people/3/",
+        cardImgPath: "/images/r2-d2-card-render.svg"
+      }
+    ];
+  }
 
 }
