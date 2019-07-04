@@ -34,7 +34,7 @@ a.cardAnchor:hover {
 
 .card-container {
     .card {
-        background: url('/images/card-oval-mask.svg'), linear-gradient(180deg, #A65249 0%, #9B251B 100%);
+        background: url('/assets/images/card-oval-mask.svg'), linear-gradient(180deg, #A65249 0%, #9B251B 100%);
         background-position: bottom right;
         // background-size: cover;
         background-repeat: no-repeat;
@@ -93,7 +93,7 @@ a.cardAnchor:hover {
 }
 
 .character-detail-card {
-    background: url('/images/card-detail-overlay-bg.svg'), linear-gradient(180deg, #A65249 0%, #9B251B 100%);
+    background: url('/assets/images/card-detail-overlay-bg.svg'), linear-gradient(180deg, #A65249 0%, #9B251B 100%);
     box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.50);
     border-radius: 8px;
     background-size: cover;
