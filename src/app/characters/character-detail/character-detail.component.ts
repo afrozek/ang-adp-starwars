@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CharactersService } from '../characters.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-character-detail',
@@ -9,18 +10,25 @@ import { CharactersService } from '../characters.service';
 })
 export class CharacterDetailComponent implements OnInit {
   test = 'test';
+  characterId: number;
   characterDetails: object;
   characterMoviesDetails: Array<object>;
 
 
-  constructor(private charactersService: CharactersService) { }
-
-  ngOnInit() {
-    this.fetchCharacterDetail(1);
+  constructor(private charactersService: CharactersService, private route: ActivatedRoute) { 
+    this.characterId = this.route.snapshot.params['id'];
   }
 
+  
+
+  ngOnInit() {
+    this.fetchCharacterDetail(this.characterId);
+  }
+
+  
+
   private fetchCharacterDetail(id: number) {
-    this.charactersService.getCharacterDetail(1)
+    this.charactersService.getCharacterDetail(id)
     .subscribe(detail => {
       console.log(detail.films);
       this.characterDetails = detail;
