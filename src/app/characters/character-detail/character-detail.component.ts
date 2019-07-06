@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class CharacterDetailComponent implements OnInit {
   test = 'test';
   characterId: number;
+  characterMetaDetails: {cardImgPath: string};
+  cardImgPath: string;
   characterDetails: object;
   characterMoviesDetails: Array<object>;
   loadedDetail: boolean = false;
@@ -21,6 +23,10 @@ export class CharacterDetailComponent implements OnInit {
 
   constructor(private charactersService: CharactersService, private route: ActivatedRoute) { 
     this.characterId = this.route.snapshot.params['id'];
+    this.characterMetaDetails =   this.charactersService.getCharactersList().filter(item => {return item.id == this.characterId})[0];
+    this.cardImgPath = this.characterMetaDetails.cardImgPath; 
+    console.log("cardImgPath: ", this.cardImgPath)
+
   }
 
   
@@ -39,7 +45,7 @@ export class CharacterDetailComponent implements OnInit {
       this.fetchCharacterMoviesDetails(detail.films)
     }, error => {
       this.errorLoading = true;
-      this.errorLoadingText = "Failed to character details";
+      this.errorLoadingText = "Failed to load character details";
 
       // alert(error);
       console.log(error);
@@ -70,7 +76,7 @@ export class CharacterDetailComponent implements OnInit {
 
     }, (err)=> {
       this.errorLoading = true;
-      this.errorLoadingText = "Failed to films details";
+      this.errorLoadingText = "Failed to load films details";
 
     })
 
