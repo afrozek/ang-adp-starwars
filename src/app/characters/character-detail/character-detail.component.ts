@@ -13,6 +13,10 @@ export class CharacterDetailComponent implements OnInit {
   characterId: number;
   characterDetails: object;
   characterMoviesDetails: Array<object>;
+  loadedDetail: boolean = false;
+  loadingText: string =  "1 of 2: Loading Character Details";
+  errorLoading: boolean;
+  errorLoadingText: string;
 
 
   constructor(private charactersService: CharactersService, private route: ActivatedRoute) { 
@@ -34,7 +38,10 @@ export class CharacterDetailComponent implements OnInit {
       this.characterDetails = detail;
       this.fetchCharacterMoviesDetails(detail.films)
     }, error => {
-      alert(error);
+      this.errorLoading = true;
+      this.errorLoadingText = "Failed to character details";
+
+      // alert(error);
       console.log(error);
     })
   }
@@ -53,11 +60,17 @@ export class CharacterDetailComponent implements OnInit {
   // }
 
   private fetchCharacterMoviesDetails(films: Array<string>) {
+    this.loadingText =  "2 of 2: Loading Films Details";
     this.charactersService.getAllMoviesDetails(films)
     .subscribe((res) => {
       console.log("res: ", res);
 
       this.characterMoviesDetails = res;
+      this.loadedDetail = true;
+
+    }, (err)=> {
+      this.errorLoading = true;
+      this.errorLoadingText = "Failed to films details";
 
     })
 

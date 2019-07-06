@@ -10,6 +10,8 @@ import { CharactersComponent } from './characters/characters.component';
 import { CharacterDetailComponent } from './characters/character-detail/character-detail.component';
 import { CharactersHomeComponent } from './characters/characters-home/characters-home.component';
 import { CharacterCardComponent } from './characters/character-card/character-card.component';
+import { LoaderComponent } from './loader/loader.component';
+import { CharacterFilmsComponent } from './characters/character-films/character-films.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CharacterCardComponent } from './characters/character-card/character-ca
     CharactersComponent,
     CharacterDetailComponent,
     CharactersHomeComponent,
-    CharacterCardComponent
+    CharacterCardComponent,
+    LoaderComponent,
+    CharacterFilmsComponent
   ],
   imports: [
     BrowserModule,

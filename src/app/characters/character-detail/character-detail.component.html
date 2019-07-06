@@ -1,4 +1,82 @@
-<p>character-detail works!</p>
-<p>{{'test: ' + test}}</p>
-<p>{{'characterDetails: ' + (characterDetails | json)}}</p>
-<p>{{'characterMoviesDetails: ' + (characterMoviesDetails | json)}}</p>
+<!-- Default Loading State -->
+<loader *ngIf="!loadedDetail" [error]="errorLoading" [errorText]="errorLoadingText" [loadingText]="loadingText"></loader>
+
+
+<!-- Loaded Success -->
+<div *ngIf="loadedDetail" class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img
+              class="d-inline-block mb-3"
+              src='/assets/images/finger-print-icon.svg'
+              alt="Finger Print"
+            />
+            <h2 class="h4">{{characterDetails.name}}</h2>
+            <p class="sub-text">Character Selected.</p>
+          </div>
+        </div>
+        <div class="character-detail-card">
+          <div class="row">
+            <div class="col-md-5">
+              <ul class="character-detail-list">
+                <span>
+                  <img 
+                  src='/assets/images/user-circle-white-icon.svg'
+                  alt="Arrow" />
+                </span>
+                <li>
+                  <span class="item-heading">Name</span>
+                  <span class="item-content">
+                    {{characterDetails.name}}
+                  </span>
+                </li>
+                <li>
+                  <span class="item-heading">Height</span>
+                  <span class="item-content">
+                    {{characterDetails.height}}
+                  </span>
+                </li>
+                <li>
+                  <span class="item-heading">Mass</span>
+                  <span class="item-content">
+                    {{characterDetails.mass}}
+                  </span>
+                </li>
+                <li>
+                  <span class="item-heading">Hair Color</span>
+                  <span class="item-content">
+                    {{characterDetails.hair_color}}
+                  </span>
+                </li>
+                <li>
+                  <span class="item-heading">Skin Color</span>
+                  <span class="item-content">
+                    {{characterDetails.skin_color}}
+                  </span>
+                </li>
+                <li>
+                  <span class="item-heading">Birth Year</span>
+                  <span class="item-content">
+                    {{characterDetails.birth_year}}
+                  </span>
+                </li>
+                <li>
+                  <span class="item-heading">Gender</span>
+                  <span class="item-content">
+                    {{characterDetails.gender}}
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-7">
+                <!-- <h3>{{selectedMovie.title}}</h3> -->
+                <!-- <CharacterFilms movies={{movies}} /> -->
+                <p>{{'characterMoviesDetails: ' + (characterMoviesDetails | json)}}}}</p>
+
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>

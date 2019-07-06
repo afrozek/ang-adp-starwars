@@ -1,0 +1,28 @@
+<div class="container d-flex justify-content-center align-items-center h-100">
+    <div class="display-block text-center">
+        <!-- Loaded Success State -->
+        <div *ngIf="!error">
+            <div>
+                <div class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="loader-text">
+                {{loadingText || "loading"}}
+            </div>
+        </div>
+
+        <!-- Error Case -->
+        <div *ngIf="error" >
+            <div>Error Loading</div>
+            <!-- Optional Error Message -->
+            <div  *ngIf="errorText">
+                {{errorText}}
+            </div>
+        </div>
+
+    </div>
+</div>
