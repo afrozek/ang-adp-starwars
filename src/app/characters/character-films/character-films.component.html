@@ -42,7 +42,7 @@
                    Producer: {{selectedMovie.producer}}
                </li>
                <li>
-                   <!-- Release Date: {moment(this.state.selectedMovie.release_date).format("dddd, MMMM D YYYY")}} -->
+                   Release Date: {{selectedMovie.release_date | date: 'fullDate'}}
                </li>
            </ul>
            <span class="back-btn" (click)="selectedMovie=null">Back to Films List</span>
