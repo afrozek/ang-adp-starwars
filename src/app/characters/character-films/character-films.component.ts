@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CharacterFilmsComponent implements OnInit {
 
-  @Input() movies: array;
+  @Input() movies: any;
   selectedMovie: object = null;
 
   selectedMovieHandler(movie) {

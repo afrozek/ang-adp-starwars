@@ -8,17 +8,21 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './character-detail.component.html',
   styleUrls: ['./character-detail.component.scss']
 })
+
+
 export class CharacterDetailComponent implements OnInit {
   test = 'test';
   characterId: number;
   characterMetaDetails: {cardImgPath: string};
   cardImgPath: string;
-  characterDetails: object;
+  characterDetails: any;
   characterMoviesDetails: Array<object>;
   loadedDetail: boolean = false;
   loadingText: string =  "1 of 2: Loading Character Details";
   errorLoading: boolean;
   errorLoadingText: string;
+
+  
 
 
   constructor(private charactersService: CharactersService, private route: ActivatedRoute) { 
@@ -30,6 +34,7 @@ export class CharacterDetailComponent implements OnInit {
   }
 
   
+  
 
   ngOnInit() {
     this.fetchCharacterDetail(this.characterId);
@@ -39,8 +44,8 @@ export class CharacterDetailComponent implements OnInit {
 
   private fetchCharacterDetail(id: number) {
     this.charactersService.getCharacterDetail(id)
-    .subscribe(detail => {
-      console.log(detail.films);
+    .subscribe((detail: any) => {
+      // console.log(detail.films);
       this.characterDetails = detail;
       this.fetchCharacterMoviesDetails(detail.films)
     }, error => {
