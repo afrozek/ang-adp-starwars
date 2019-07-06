@@ -1,11 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-character-films',
+  selector: 'character-films',
   templateUrl: './character-films.component.html',
   styleUrls: ['./character-films.component.scss']
 })
 export class CharacterFilmsComponent implements OnInit {
+
+  @Input() movies: array;
+  selectedMovie: object = null;
+
+  selectedMovieHandler(movie) {
+    this.selectedMovie = movie;
+  }
 
   constructor() { }
 
@@ -13,3 +20,4 @@ export class CharacterFilmsComponent implements OnInit {
   }
 
 }
+
