@@ -82,7 +82,7 @@ a.cardAnchor:hover {
     padding: 30px 70px;
 }
 
-.character-detail-list {
+.character-detail-list, .film-detail-list {
     list-style: none;
     li {
         margin: 15px 0px;
@@ -104,6 +104,11 @@ a.cardAnchor:hover {
         position: relative;
         z-index: 99;
         display: block;
+    }
+
+    .small-light-text {
+        font-size: 12px;
+        font-family: montserrat-light;
     }
 }
 

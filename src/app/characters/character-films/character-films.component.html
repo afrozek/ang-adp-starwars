@@ -28,21 +28,45 @@
            <div>
 
            </div>
-           <ul>
+           <ul class="film-detail-list">
                <li>
-                   Title: {{selectedMovie.title}}
+                   <span class="item-heading">
+                       Title
+                   </span>
+                   <span class="item-content">
+                        {{selectedMovie.title}}
+                   </span>
+                   
                </li>
                 <li>
-                   Sypnosis: {{selectedMovie.opening_crawl}}
+                    <span class="item-heading">
+                            Sypnosis
+                    </span>
+                   <span class="item-content small-light-text">{{selectedMovie.opening_crawl}}</span>
                </li> 
                <li>
-                   Director: {{selectedMovie.director}}
+                   <span class="item-heading">
+                        Director
+                   </span>
+                   <span class="item-content">
+                        {{selectedMovie.director}}
+                   </span>
                </li>
                <li>
-                   Producer: {{selectedMovie.producer}}
+                   <span class="item-title">
+                        Producer
+                   </span>
+                   <span class="item-content">
+                        {{selectedMovie.producer}}
+                   </span>
                </li>
                <li>
-                   Release Date: {{selectedMovie.release_date | date: 'fullDate'}}
+                   <span class="item-title">
+                        Release Date
+                   </span>
+                   <span class="item-content">
+                        {{selectedMovie.release_date | date: 'fullDate'}}
+                   </span>
                </li>
            </ul>
            <span class="back-btn" (click)="selectedMovie=null">Back to Films List</span>
