@@ -13,6 +13,7 @@ const routes: Routes = [
     { path: ':id/detail', component: CharacterDetailComponent }
   ]},
   { path: '',   redirectTo: 'characters', pathMatch: 'full' },
+  { path: '**',   redirectTo: 'characters' },
 ];
 
 @NgModule({
