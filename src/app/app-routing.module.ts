@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'characters', component: CharactersComponent, children: [
     { path: '', component: CharactersHomeComponent },
     { path: ':id/detail', component: CharacterDetailComponent }
-  ]}
+  ]},
+  { path: '',   redirectTo: 'characters', pathMatch: 'full' },
 ];
 
 @NgModule({
