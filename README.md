@@ -1,6 +1,6 @@
 ## ADP Pre-Interview Project
 
-Demo: [adp.afrozek.com](https://adp.afrozek.com/)
+Demo: [adp.afrozek.com](https://adp.afrozek.com/){:target="_blank"}
 
 Created using:
 - Angular 8
