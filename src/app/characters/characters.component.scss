@@ -11,6 +11,8 @@ a.cardAnchor:hover {
 }
 
 .card-container {
+    margin-bottom: 15px;
+    
     .card {
         background: url('/assets/images/card-oval-mask.svg'), linear-gradient(180deg, #A65249 0%, #9B251B 100%);
         background-position: bottom right;
