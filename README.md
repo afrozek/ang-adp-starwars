@@ -1,6 +1,18 @@
-# AngAdpStarwars
+## ADP Pre-Interview Project
+
+Demo: [adp.afrozek.com](https://adp.afrozek.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+
+
+Created using
+- Angular 8
+- Bootstrap 4 & SASS
+- Netlify for Continuous Integration
+- Sketch for designing and prototyping
+
+Originally created in react, then recreated in Angular 8
+
 
 ## Development server
 
